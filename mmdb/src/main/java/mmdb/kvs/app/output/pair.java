@@ -1,11 +1,13 @@
 package mmdb.kvs.app.output;
 
+import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class pair {
 	private String key;
 	
-	private String value;
+	private Map<String,String> value;
 
 	@JsonProperty
 	public String getKey() {
@@ -17,11 +19,11 @@ public class pair {
 	}
 	
 	@JsonProperty
-	public String getValue() {
+	public Map<String, String> getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(Map<String, String> value) {
 		this.value = value;
 	}
 }
